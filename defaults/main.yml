@@ -1,0 +1,4 @@
+---
+bucket_name: S3_BUCKET_NAME
+dest_location: /tmp
+region: us-east-1

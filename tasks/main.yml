@@ -1,0 +1,20 @@
+---
+- name: List s3 objects
+  aws_s3:
+    bucket: "{{ bucket_name }}"
+    mode: list
+    aws_access_key: "{{ lookup('env','AWS_ACCESS_KEY_ID') }}"
+    aws_secret_key: "{{ lookup('env','AWS_SECRET_ACCESS_KEY') }}"
+    region: "{{ region }}"
+  register: s3objects
+
+- name: Get operation
+  aws_s3:
+    bucket: "{{ bucket_name }}"
+    object: "{{ item }}"
+    dest: "{{ dest_location }}/{{ item|basename }}"
+    mode: get
+    aws_access_key: "{{ lookup('env','AWS_ACCESS_KEY_ID') }}"
+    aws_secret_key: "{{ lookup('env','AWS_SECRET_ACCESS_KEY') }}"
+    region: "{{ region }}"
+  with_items: "{{ s3objects.s3_keys }}"
