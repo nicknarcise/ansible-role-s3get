@@ -1,16 +1,17 @@
 ========
 
-AWS s3 list bucket and recursivley get files
+AWS s3 list bucket and recursively all get files in the bucket
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+Must have exported AWS environment varialbes for "AWS_ACCESS_KEY_ID" and "AWS_SECRET_ACCESS_KEY" (no defaults).
+in AWX ensure AWS account is attached to project template instead of manual export.
+
+a valid S3 bucket must be defined
 
 Role Variables
 --------------
-Must have exported AWS environment varialbes for "AWS_ACCESS_KEY_ID" and "AWS_SECRET_ACCESS_KEY" (no defaults). 
-in AWX ensure AWS account is attached to project template instead of manual export.
 
 bucket_name
 dest_location
