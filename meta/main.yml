@@ -17,8 +17,5 @@ galaxy_info:
     # NOTE: A tag is limited to a single word comprised of alphanumeric characters.
     #       Maximum 20 tags per role.
 
-dependencies: 
-  - defined "bucket_name" (defaults to S3_BUCKET_NAME)
-  - defined "dest_location" (defaults to /tmp)
-  - defined "region" (defaults to us-east-1)
+dependencies: []
 
