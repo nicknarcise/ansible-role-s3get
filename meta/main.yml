@@ -18,7 +18,6 @@ galaxy_info:
     #       Maximum 20 tags per role.
 
 dependencies: 
-  - must have exported AWS environment varialbes for "AWS_ACCESS_KEY_ID" and "AWS_SECRET_ACCESS_KEY" (no defaults). AWX ensure AWS account is attached to project template instead of manual export
   - defined "bucket_name" (defaults to S3_BUCKET_NAME)
   - defined "dest_location" (defaults to /tmp)
   - defined "region" (defaults to us-east-1)
